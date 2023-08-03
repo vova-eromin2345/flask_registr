@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="../static/css/form.css">
+{% endblock styles %}
+
+{% block caption__title %}
+    {% block title %} {% endblock title %}
+{% endblock caption__title %}
+
+{% block content %}
+        <form action="{{ url_for(action) }}" method="post"> 
+            <div class="form__container">
+                <h2 class="form__title">
+                    {% block form__title %}Form{% endblock form__title %}
+                </h2>
+
+                <div class="inputs">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div id="error">{{message}}</div>
+                            {% endfor %}    
+                        {% endif %}
+                    {% endwith %}
+
+                    {% block inputs %}{% endblock inputs %}
+                </div>
+
+                <button type='submit' class='submit__btn'>
+                    {% block submit__btn %}Submit{% endblock submit__btn %}
+                </button>
+
+            </div>
+
+        </form>
+        
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Home page{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="../static/css/home.css">
+{% endblock styles %}
+
+{% block caption__title %}Главная страница :){% endblock caption__title %}
+{% block about__page %}Приветствую вас на главной странице сайта !{% endblock about__page %}
+
+{% block content %}
+
+    <div class="sign_buttons"> 
+        <button class="SignInBtn">
+            <a href="/sign-in">Войти</a>
+        </button>
+
+        <button class="SignUpBtn">
+            <a href="/sign-up">Регистрация</a>
+        </button>
+    </div>
+
+{% endblock content %}

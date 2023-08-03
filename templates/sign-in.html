@@ -1,0 +1,21 @@
+{% extends 'form.html' %}
+
+{% block title %}Вход{% endblock title %}
+
+{% block about__page %}
+    Войдите в свой аккаунт
+{% endblock about__page %}
+
+
+{% block inputs %}
+   <div class="input">
+        <label for='login'>Логин</label>
+        <input id='login' type="text" name="login" required>
+   </div>  
+
+   <div class="input">
+        <label for='password'>Пароль</label>
+        <input id='password' type="password" name="password" required>
+   </div> 
+
+{% endblock inputs %}

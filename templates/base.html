@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {%block title%}Default title{%endblock title%}</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    
+    {% block styles %}{% endblock styles %}
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="page__caption">
+            <h1 class="caption__title">{% block caption__title %}Default page{% endblock caption__title %}</h1>
+            <div class="caption__content">
+                <p>{% block about__page %}About page{% endblock about__page %}</p>
+            </div>
+        </div>
+
+        <div class="content">
+            {% block content %}{% endblock content %}
+        </div>
+
+    </div>
+
+</body>
+
+</html>

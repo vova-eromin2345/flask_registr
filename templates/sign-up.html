@@ -1,0 +1,22 @@
+{% extends 'form.html' %}
+
+{% block title %}Регистрация{% endblock title %}
+
+{% block about__page %}
+    Зареестрируйтесь
+{% endblock about__page %}
+
+{% block form__title %}login{% endblock form__title %}
+
+{% block inputs %}
+   <div class="input">
+        <label for='login'>Логин</label>
+        <input id='login' type="text" name="login" required>
+   </div>  
+
+   <div class="input">
+        <label for='password'>Пароль</label>
+        <input id='password' type="password" name="password" required>
+   </div> 
+
+{% endblock inputs %}

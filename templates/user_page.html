@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="../static/css/user_page.css">
+{% endblock styles %}
+
+{% block caption__title %}Info{% endblock caption__title %}
+
+
+{% block about__page %}Login: {{login}} <br> Password: {{password}} {% endblock about__page %}
