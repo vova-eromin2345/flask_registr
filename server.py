@@ -29,7 +29,7 @@ def sign_in(): # Войти
 
 
 @app.route('/sign-up', methods=["GET", "POST"])
-def sign_up(): # Реестрация
+def sign_up(): # Регистрация
     if request.method == "POST":
         login = request.form['login']
         password = request.form['password']
